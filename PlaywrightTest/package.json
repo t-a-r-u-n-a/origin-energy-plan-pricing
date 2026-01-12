@@ -2,7 +2,13 @@
   "name": "playwrighttest",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "docker:build": "docker build -t origin-playwright .",
+    "docker:run": "docker run --rm -v \"${PWD}\":/app -v /app/node_modules -e CI=true origin-playwright",
+    "docker:test": "npm run docker:build && npm run docker:run"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -12,5 +18,8 @@
     "@types/node": "^22.10.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "pdf-parse": "^1.1.1"
   }
 }

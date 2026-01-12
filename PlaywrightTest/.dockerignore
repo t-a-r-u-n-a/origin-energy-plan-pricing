@@ -1,0 +1,10 @@
+node_modules
+test-results
+test-downloads
+playwright-report
+.vscode
+.idea
+.DS_Store
+npm-debug.log
+coverage
+.env

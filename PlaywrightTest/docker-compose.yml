@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  playwright:
+    build: .
+    image: origin-playwright
+    environment:
+      - CI=true
+    volumes:
+      - ./:/app:delegated
+      - origin_playwright_report:/app/playwright-report
+      - /app/node_modules
+      - ./test-results:/app/test-results
+      - ./playwright-report:/app/playwright-report
+    working_dir: /app
+    entrypoint: ["npx","playwright","test"]
+    tty: true
+
+volumes:
+  origin_playwright_report:    
