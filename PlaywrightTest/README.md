@@ -39,7 +39,6 @@ npm install playwright
 1. Clone this repository:
    ```bash
    git clone https://github.com/t-a-r-u-n-a/origin-energy-plan-pricing.git
-   cd ui-automation
    ```
 
 2. Install dependencies:
@@ -57,7 +56,7 @@ npm install playwright
 ## File Structure
 
 ```plaintext
-.
+PlaywrightTest
 ├── package.json
 ├── playwright.config.ts
 ├── Dockerfile
