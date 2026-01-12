@@ -57,7 +57,7 @@ npm install playwright
 ## File Structure
 
 ```plaintext
-.
+PlaywrightTest
 ├── package.json
 ├── playwright.config.ts
 ├── Dockerfile
